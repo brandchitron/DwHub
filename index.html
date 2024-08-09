@@ -8,18 +8,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DwHub: Download Videos Online</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>
+        .dropdown-menu {
+            min-width: 150px;
+        }
+        .dropdown-item {
+            padding: 10px 20px;
+        }
+        .dropdown-toggle::after {
+            display: none; /* Remove the default dropdown indicator */
+        }
+    </style>
 </head>
 <body>
     <header class="bg-dark text-white">
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <a class="navbar-brand" href="#">DwHub</a>
-            <button aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-target="#navbarNav" data-toggle="collapse" type="button"></button>
+            <button aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-target="#navbarNav" data-toggle="collapse" type="button">
+                <span class="navbar-toggler-icon"></span>
+            </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ml-auto">
-                    <li class="nav-item active"><a class="nav-link" href="#">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="http://policy.com">Privacy Policy</a></li>
-                    <li class="nav-item"><a class="nav-link" href="https://terms.com">Terms & Conditions</a></li>
-                    <li class="nav-item"><a class="nav-link" href="mailto:mail@gmail.com">Contact</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <span class="sr-only">Toggle Dropdown</span>
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#">Home</a>
+                            <a class="dropdown-item" href="http://policy.com">Privacy Policy</a>
+                            <a class="dropdown-item" href="https://terms.com">Terms & Conditions</a>
+                            <a class="dropdown-item" href="mailto:mail@gmail.com">Contact</a>
+                        </div>
+                    </li>
                 </ul>
             </div>
         </nav>
