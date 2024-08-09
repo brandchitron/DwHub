@@ -9,6 +9,22 @@
     <title>DwHub: Download Videos Online</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <style>
+        .navbar-toggler {
+            border: none;
+            background-color: blue; /* Blue background for Menu button */
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+        }
+        .navbar-toggler:hover {
+            background-color: darkblue;
+        }
+        .navbar-toggler-icon {
+            display: none; /* Hide the default icon */
+        }
+        header {
+            background-color: #add8e6; /* Light blue color */
+        }
         .dropdown-menu {
             min-width: 150px;
         }
@@ -18,28 +34,14 @@
         .dropdown-toggle::after {
             display: none; /* Remove the default dropdown indicator */
         }
-        .navbar-toggler {
-            border: none; /* Remove default border */
-            background: transparent; /* Make the background transparent */
-            padding: 0; /* Remove default padding */
-        }
-        .navbar-toggler-icon {
-            background-image: url('https://imgur.com/a/jKUZ6eR'); /* Set the custom icon URL */
-            background-size: cover; /* Ensure the background image covers the element */
-            width: 30px; /* Set the width of the icon */
-            height: 30px; /* Set the height of the icon */
-        }
-        header {
-            background-color: #90ee90; /* Light green color */
-        }
     </style>
 </head>
 <body>
-    <header class="bg-light-green text-white">
-        <nav class="navbar navbar-expand-lg navbar-light bg-light-green">
+    <header class="bg-light-blue text-white">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light-blue">
             <a class="navbar-brand" href="#">DwHub</a>
             <button aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-target="#navbarNav" data-toggle="collapse" type="button">
-                <span class="navbar-toggler-icon"></span>
+                Menu
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ml-auto">
@@ -128,6 +130,10 @@
             </ul>
         </div>
     </section>
+
+    <footer class="bg-light text-center py-3">
+        <p>&copy; 2024 DwHub. All rights reserved.</p>
+    </footer>
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
