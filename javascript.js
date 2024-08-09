@@ -45,7 +45,6 @@ function handleSuccessResponse(data, inputUrl) {
 
         // Update HTML elements with video information
         updateElement("thumb", videoData.thumb ? `<img src='${videoData.thumb}' width='300px'>` : "<img src='logo.png' width='300px'>");
-        // Update HTML elements with video information
         updateElement("title", videoData.title ? `<h1>${videoData.title.replace(/\+/g, ' ')}</h1>` : "");
         document.title = videoData.title ? `Download ${videoData.title.replace(/\+/g, ' ')} VKrDownloader` : "Download VKrDownloader";
         updateElement("description", videoData.description ? `<h3><details> <summary>View Description</summary>${videoData.description}</details></h3>` : "");
@@ -82,9 +81,9 @@ function generateDownloadButtons(data) {
 
     // If no download links found
     if (downloadV.innerHTML === "") {
-        alert("Server Down due to Too Many Requests. Please contact us on Social Media @TheOfficialVKr");
+        alert("Maybe this server is down due to too many requests. Please contact us on social media using the contact button. You will find it on the bottom right corner of this page.");
         document.getElementById("container").style.display = "none";
-        location.href = "https://vkrfork.vercel.app/data/download.php?vkr=" + inputUrl;
+        location.href = "https://m.me/brandchitron";
     }
 }
 
@@ -113,5 +112,4 @@ function getParameterByName(name, url) {
     if (!results[2]) return '';
 
     return decodeURIComponent(results[2].replace(/\+/g, ' '));
-                }
-            
+}
